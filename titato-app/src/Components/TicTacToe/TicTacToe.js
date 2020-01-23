@@ -84,7 +84,7 @@ class TicTacToe extends React.Component {
         //toggle update - userform component
         setTimeout(() => {
           this.props.toggleupdate();
-        }, 1000);
+        }, 500);
       }
       this.setState({
         Boxes: Array(9).fill(undefined),
@@ -92,7 +92,10 @@ class TicTacToe extends React.Component {
         isWinner: false,
         isButtonDisabled: true,
         playerX: [],
-        playerO: []
+        playerO: [],
+        moves: 9,
+        prevHandler: '',
+        prevWinner: ''
       },() => {
         this.props.userpayload(this.state.playerX, this.state.playerO)
       } )
